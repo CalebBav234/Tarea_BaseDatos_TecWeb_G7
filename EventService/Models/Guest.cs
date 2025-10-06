@@ -10,6 +10,7 @@ namespace EventService.Models
 
         public string Fullname { get; set; } = string.Empty;
 
+        [Required]
         public bool Confirmed { get; set; }
 
     }

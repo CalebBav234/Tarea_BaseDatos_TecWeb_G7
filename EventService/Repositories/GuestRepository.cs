@@ -13,7 +13,7 @@ namespace EventService.Repositories
         }
         public async Task Add(Guest newGuest)
         {
-            await _context.AddAsync(newGuest);
+            await _context.Guests.AddAsync(newGuest);
         }
 
         public async Task Delete(Guid id)

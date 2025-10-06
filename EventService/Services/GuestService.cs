@@ -2,7 +2,7 @@
 using EventService.Models.dtos;
 using EventService.Repositories;
 
-namespace EventService.EventService.Services
+namespace EventService.Services
 {
     public class GuestService : IGuestService
     {

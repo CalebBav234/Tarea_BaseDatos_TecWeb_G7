@@ -15,7 +15,8 @@ builder.Services.AddDbContext<EventService.Data.AppDbContext>(opt =>
 
 builder.Services.AddScoped<EventService.Repositories.IEventRepository, EventService.Repositories.EventRepository>();
 builder.Services.AddScoped<EventService.Services.IEventService, EventService.Services.EventService>();
-
+builder.Services.AddScoped<EventService.Repositories.IGuestRepository, EventService.Repositories.GuestRepository>();
+builder.Services.AddScoped<EventService.Services.IGuestService, EventService.Services.GuestService>();
 var app = builder.Build();
 // Dependency Injection
 

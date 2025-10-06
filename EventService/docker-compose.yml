@@ -16,5 +16,25 @@ services:
       interval: 5s
       timeout: 3s
       retries: 10
+
+  guest_db:
+    image: postgres:16
+    container_name: guest_pg
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: guestdb
+      POSTGRES_USER: guestuser
+      POSTGRES_PASSWORD: supersecret
+    ports:
+      - "5433:5432"
+    volumes:
+      - guest_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U guestuser -d guestdb"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
 volumes:
   events_data:
+  guest_data:  

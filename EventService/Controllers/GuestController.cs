@@ -1,9 +1,8 @@
-﻿using EventService.EventService.Services;
+﻿using EventService.Services;
 using EventService.Models.dtos;
-using EventService.Services;
 using Microsoft.AspNetCore.Mvc;
 
-namespace EventService.EventService.Controllers
+namespace EventService.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

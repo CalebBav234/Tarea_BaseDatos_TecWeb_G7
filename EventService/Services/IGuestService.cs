@@ -1,7 +1,7 @@
 ﻿using EventService.Models.dtos;
 using EventService.Models;
 
-namespace EventService.EventService.Services
+namespace EventService.Services
 {
     public interface IGuestService
     {
